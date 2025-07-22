@@ -1,0 +1,334 @@
+/* --- THEME & BASE STYLES --- */
+:root {
+    /* Design System Colors */
+    --str-primary-50: #f5fff2;
+    --str-primary-100: #ecfee0;
+    --str-primary-200: #dafec7;
+    --str-primary-300: #c6fba3;
+    --str-primary-400: #b3f78f;
+    --str-primary-500: #96f26c;
+    --str-primary-600: #50b358;
+    --str-primary-700: #268a40;
+    --str-primary-800: #1a5e2d;
+    --str-primary-900: #0d331a;
+    --str-secondary-50: #f9fcff;
+    --str-secondary-100: #f2f8ff;
+    --str-secondary-200: #d9ecff;
+    --str-secondary-300: #b6e5ff;
+    --str-secondary-400: #93ddff;
+    --str-secondary-500: #70d6ff;
+    --str-secondary-600: #009ec2;
+    --str-secondary-700: #0082ae;
+    --str-secondary-800: #00668a;
+    --str-secondary-900: #004a66;
+    --white: #ffffff;
+    --black: #000000;
+    --rose-400: #fb7185;
+    --rose-600: #e11d48;
+    --rose-800: #9f1239;
+    --rose-950: #4c0519;
+    --amber-400: #F59E0B;
+    --amber-600: #D97706;
+    --amber-800: #92400E;
+    --amber-950: #451A03;
+    --teal-400: #2DD4BF;
+    --teal-600: #0D9488;
+    --teal-800: #115E59;
+    --teal-950: #042F2E;
+    --success-stroke-light: var(--teal-400);
+    --success-surface-light: var(--teal-50);
+    --success-stroke-dark: var(--teal-800);
+    --success-surface-dark: var(--teal-950);
+    --warning-stroke-light: var(--amber-400);
+    --warning-surface-light: var(--amber-50);
+    --warning-stroke-dark: var(--amber-800);
+    --warning-surface-dark: var(--amber-950);
+    --error-stroke-light: var(--rose-400);
+    --error-surface-light: var(--rose-50);
+    --error-stroke-dark: var(--rose-800);
+    --error-surface-dark: var(--rose-950);
+    --grey-1000: #1a1918;
+    --grey-950: #242321;
+    --grey-900: #2d2b29;
+    --grey-850: #393633;
+    --grey-800: #44403d;
+    --grey-750: #4f4a46;
+    --grey-700: #5b5650;
+    --grey-450: #978f86;
+    --grey-400: #a49b93;
+    --grey-350: #afa8a0;
+    --grey-200: #d3cec9;
+    --grey-100: #ebe9e6;
+  
+    /* UI Theme Mapping */
+    --bg-main: var(--grey-1000);
+    --bg-primary: var(--grey-950);
+    --bg-panel: #1A1D21;
+    --bg-panel-header: #202428;
+    --border-primary: var(--grey-850);
+    --border-secondary: var(--grey-800);
+    --text-primary: var(--grey-100);
+    --text-secondary: var(--grey-400);
+    --text-tertiary: var(--grey-450);
+    --accent-primary: var(--str-secondary-500);
+    --accent-secondary: var(--str-secondary-600);
+    --accent-danger: var(--rose-400);
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-size: 14px;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  button {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* --- MAIN LAYOUT --- */
+  #app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 60px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-primary);
+    flex-shrink: 0;
+  }
+  .header-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .header-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .main-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary {
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+  }
+  .btn-primary:hover {
+    background-color: var(--str-secondary-500);
+  }
+  .btn-secondary {
+      background-color: #31373D;
+      border: 1px solid var(--border-secondary);
+      color: var(--text-primary);
+      padding: 6px 12px;
+  }
+  .btn-secondary:hover {
+      background-color: #40464C;
+      border-color: var(--grey-750);
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    background: var(--bg-main);
+  }
+  
+  /* --- PANELS & EDITORS --- */
+  .panel {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-panel);
+    overflow: hidden;
+  }
+
+  .gutter {
+      background-color: var(--bg-main);
+  }
+  .gutter.gutter-horizontal {
+      cursor: col-resize;
+  }
+  .gutter.gutter-vertical {
+      cursor: row-resize;
+  }
+  
+  .editor-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      overflow: hidden;
+      min-height: 0;
+  }
+
+  .editor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: var(--bg-panel-header);
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--border-primary);
+  }
+  .editor-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+  }
+  .CodeMirror {
+      flex-grow: 1;
+      height: 100%;
+      font-size: 13px;
+  }
+  .CodeMirror-gutters {
+      background: #1A1D21 !important;
+      border-right: 1px solid var(--border-primary);
+  }
+  
+  /* --- Toast Notifications --- */
+  #toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .toast {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .toast.success {
+    background-color: var(--str-primary-500);
+    color: var(--black);
+  }
+  .toast.error {
+    background-color: var(--rose-600);
+    color: var(--white);
+  }
+  .toast.warning {
+    background-color: var(--amber-400);
+    color: var(--black);
+  }
+  
+  /* --- Custom Checkbox --- */
+  .header-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header-option .option-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
+  }
+  .custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .custom-checkbox-label {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #31373D;
+    border: 1px solid var(--border-secondary);
+    border-radius: 4px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  .custom-checkbox-label::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .custom-checkbox:hover + .custom-checkbox-label {
+    border-color: var(--accent-primary);
+  }
+  .custom-checkbox:checked + .custom-checkbox-label {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+  }
+  .custom-checkbox:checked + .custom-checkbox-label::after {
+    display: block;
+  }
+  
+  /* Scrollbar Styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-750) var(--bg-panel);
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-panel);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--grey-750);
+    border-radius: 4px;
+    border: 2px solid var(--bg-panel);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--grey-700);
+  }

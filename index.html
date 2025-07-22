@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricks2Code</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/format/formatting.min.js"></script>
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <!-- APP HEADER -->
+        <header class="main-header">
+            <h1 class="header-title">Bricks2Code</h1>
+            <div class="header-actions">
+                <!-- ** NEW CHECKBOX ADDED HERE ** -->
+                <div class="header-option">
+                    <input type="checkbox" id="force-ids-checkbox" class="custom-checkbox">
+                    <label for="force-ids-checkbox" class="custom-checkbox-label"></label>
+                    <label for="force-ids-checkbox" class="option-label">Force Element IDs</label>
+                </div>
+                <button id="convert-btn" class="main-btn btn-primary">Convert</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="main-content" class="main-content">
+            
+            <!-- Left Panel: JSON Input -->
+            <div id="json-panel" class="panel">
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <div class="editor-title"><i id="icon-js" class="icon"></i> Bricks JSON Input</div>
+                    </div>
+                    <textarea id="json-editor"></textarea>
+                </div>
+            </div>
+
+            <!-- Right Panel: Code Output -->
+            <div id="code-panel" class="panel">
+                <div id="html-output-container" class="editor-container">
+                    <div class="editor-header">
+                        <div class="editor-title"><i id="icon-html" class="icon"></i> HTML Output</div>
+                        <button id="copy-html-btn" class="main-btn btn-secondary">Copy HTML</button>
+                    </div>
+                    <textarea id="html-output"></textarea>
+                </div>
+                <div id="css-output-container" class="editor-container">
+                     <div class="editor-header">
+                        <div class="editor-title"><i id="icon-css" class="icon"></i> CSS Output</div>
+                        <button id="copy-css-btn" class="main-btn btn-secondary">Copy CSS</button>
+                     </div>
+                    <textarea id="css-output"></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>

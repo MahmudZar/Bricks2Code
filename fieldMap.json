@@ -1,0 +1,117 @@
+{
+    "content": [
+      {
+        "id": "byeqdf",
+        "name": "div",
+        "parent": "bpdsla",
+        "children": [],
+        "settings": {
+          "_cssGlobalClasses": [
+            "tqfsbw"
+          ],
+          "_attributes": [
+            {
+              "id": "tkikay",
+              "name": "data-cutom",
+              "value": "zar"
+            }
+          ]
+        },
+        "label": "team card"
+      }
+    ],
+    "source": "bricksCopiedElements",
+    "sourceUrl": "https://rocket9.ch",
+    "version": "1.12.4",
+    "globalClasses": [
+      {
+        "id": "tqfsbw",
+        "name": "team-card",
+        "settings": {
+          "_margin": {
+            "top": "20",
+            "left": "10",
+            "right": "10"
+          },
+          "_padding": {
+            "top": "20",
+            "left": "10",
+            "bottom": "3",
+            "right": "20"
+          },
+          "_position": "relative",
+          "_cssCustom": ".team-card{\n  background: red;\n}",
+          "_isolation": "isolate",
+          "_width": "100%",
+          "_widthMin": "300",
+          "_widthMax": "900",
+          "_height": "100%",
+          "_heightMin": "400",
+          "_heightMax": "1000",
+          "_aspectRatio": "16:9",
+          "_top": "2",
+          "_right": "4",
+          "_bottom": "5",
+          "_left": "3",
+          "_zIndex": "4",
+          "_visibility": "visible",
+          "_overflow": "hiden",
+          "_opacity": "3",
+          "_cursor": "auto",
+          "_mixBlendMode": "multiply",
+          "_pointerEvents": "none",
+          "_background": {
+            "color": {
+              "id": "acss_import_success-semi-dark",
+              "name": "success-semi-dark",
+              "raw": "var(--success-semi-dark)"
+            },
+            "image": {
+              "id": 5165,
+              "filename": "about-process-image-v2.jpg",
+              "size": "full",
+              "full": "https://rocket9.ch/wp-content/uploads/about-process-image-v2.jpg",
+              "url": "https://rocket9.ch/wp-content/uploads/about-process-image-v2.jpg"
+            },
+            "blendMode": "multiply",
+            "attachment": "fixed",
+            "position": "top right",
+            "repeat": "no-repeat",
+            "size": "auto"
+          },
+          "_border": {
+            "width": {
+              "top": "2",
+              "left": "2",
+              "right": "1",
+              "bottom": "3"
+            },
+            "style": "solid",
+            "color": {
+              "id": "acss_import_success",
+              "name": "success",
+              "raw": "var(--success)"
+            },
+            "radius": {
+              "top": "23",
+              "right": "2rem",
+              "left": "2em",
+              "bottom": "2"
+            }
+          },
+          "_transform": {
+            "translateX": "2",
+            "translateY": "3",
+            "scaleX": "1",
+            "scaleY": "1",
+            "rotateX": "1",
+            "rotateY": "2",
+            "rotateZ": "3",
+            "skewX": "3",
+            "skewY": "3"
+          }
+        }
+      }
+    ],
+    "globalElements": []
+  }
